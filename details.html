@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="/" class="logo">verifiedLINKs <span class="circle"></span></a>
+        <div class="group">
+          <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+          <div class="search"> 
+            <span class="icon">
+              <ion-icon name="search-outline" class="searchBtn"></ion-icon>
+              <ion-icon name="close-outline" class="closeBtn"></ion-icon>
+            </span>
+          </div> 
+          <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
+        </div>
+  </header>
+  <!-- header -->
+
+  <div class="container">
+    <div class="prod-con">
+        <div class="details">
+          <div class="image">
+            <img src="">
+          </div>
+          <div class="content">
+            <h1 class="name"></h1>
+            <div class="price"></div>
+            <div class="buttons">
+              <button class="btn-cart">Check Out</button>
+              <button class="btn-buy">
+                Add to Cart
+                <span>
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div class="description text-light"></div>
+          </div>
+        </div>
+    </div>
+    <div class="prod-title">SIMILAR PRODUCTS</div>
+    <div class="listProduct"></div>
+  </div>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="js/header.js"></script>
+  <!-- <script src="js/product.js"></script> -->
+
+  <script>
+    //get datas from product.json
+  let products = null;
+  fetch('js/products.json')
+  .then(response => response.json())
+  .then(data => {
+    products = data;
+    showDetails();
+})
+ 
+  
+ //get product datas 
+ function showDetails () {
+  let details = document.querySelector('.details');
+  let productId = new URLSearchParams(window.location.search).get('id');
+  let thisProduct = products.filter(value => {
+    return value.id == productId
+  })[0];
+
+  if(!thisProduct){
+    window.location.href = "shop.html";
+  }
+  details.querySelector('.image img').src = thisProduct.image;
+  details.querySelector('.name').innerText = thisProduct.name;
+  details.querySelector('.price').innerText ='$' + thisProduct.price;
+  details.querySelector('.description').innerText = thisProduct.description;
+
+  // add data product similar
+ // show all products
+ 
+ let listProduct = document.querySelector('.listProduct');
+ (products.filter(value => value.id != productId))
+ .forEach(product => {
+   let newProduct = document.createElement('a');
+   newProduct.href = '/details.html?id=' + product.id;
+   newProduct.classList.add('item');
+   newProduct.innerHTML = `
+   <img src="${product.image}">
+   <h2>${product.name}</h2>
+   <div class="price">${product.price}</div>
+   `;
+   listProduct.appendChild(newProduct);
+ })
+
+ } 
+  </script>
+</body>
+</html>

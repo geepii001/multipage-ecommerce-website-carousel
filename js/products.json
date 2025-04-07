@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "LDO1 LOUNGE CHAIR",
+    "price": 200,
+    "image": "pro-sec/1.png",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim expedita molestias omnis impedit ex cupiditate dolorum necessitatibus. Similique fuga dolores blanditiis. Accusantium molestias quod quidem doloribus numquam laborum ea unde?"
+  },
+    {
+      "id": 2,
+      "name": "LDO2 LOUNGE CHAIR",
+      "price": 200,
+      "image": "pro-sec/2.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim expedita molestias omnis impedit ex cupiditate dolorum necessitatibus. Similique fuga dolores blanditiis. Accusantium molestias quod quidem doloribus numquam laborum ea unde?"
+    },
+      {
+        "id": 3,
+        "name": "LDO3 LOUNGE CHAIR",
+        "price": 200,
+        "image": "pro-sec/3.png",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim expedita molestias omnis impedit ex cupiditate dolorum necessitatibus. Similique fuga dolores blanditiis. Accusantium molestias quod quidem doloribus numquam laborum ea unde?"
+      },
+      {
+        "id": 4,
+        "name": "LDO4 LOUNGE CHAIR",
+        "price": 200,
+        "image": "pro-sec/4.png",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim expedita molestias omnis impedit ex cupiditate dolorum necessitatibus. Similique fuga dolores blanditiis. Accusantium molestias quod quidem doloribus numquam laborum ea unde?"
+      },
+      {
+        "id": 5,
+        "name": "LDO5 LOUNGE CHAIR",
+        "price": 200,
+        "image": "pro-sec/5.png",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim expedita molestias omnis impedit ex cupiditate dolorum necessitatibus. Similique fuga dolores blanditiis. Accusantium molestias quod quidem doloribus numquam laborum ea unde?"
+      },
+      {
+        "id": 6,
+        "name": "LDO6 LOUNGE CHAIR",
+        "price": 200,
+        "image": "pro-sec/6.png",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim expedita molestias omnis impedit ex cupiditate dolorum necessitatibus. Similique fuga dolores blanditiis. Accusantium molestias quod quidem doloribus numquam laborum ea unde?"
+      },
+      {
+        "id": 7,
+        "name": "LDO7 LOUNGE CHAIR",
+        "price": 200,
+        "image": "pro-sec/7.png",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim expedita molestias omnis impedit ex cupiditate dolorum necessitatibus. Similique fuga dolores blanditiis. Accusantium molestias quod quidem doloribus numquam laborum ea unde?"
+      },
+      {
+        "id": 8,
+        "name": "LDO8 LOUNGE CHAIR",
+        "price": 200,
+        "image": "pro-sec/8.png",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim expedita molestias omnis impedit ex cupiditate dolorum necessitatibus. Similique fuga dolores blanditiis. Accusantium molestias quod quidem doloribus numquam laborum ea unde?"
+      }
+]
